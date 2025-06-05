@@ -1,0 +1,16 @@
+{
+  "mcp": {
+    "inputs": [],
+    "servers": {
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "${workspaceFolder}/storage"
+        ]
+      }
+    }
+  },
+  "chat.mcp.discovery.enabled": true
+}
