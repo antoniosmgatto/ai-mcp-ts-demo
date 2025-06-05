@@ -50,6 +50,10 @@ server.resource(
 
 //Start receiving messages on stdin and sending responses on stdout
 const transport = new StdioServerTransport();
-await server.connect(transport);
 
-console.log("Server is running and waiting for messages...");
+try {
+  await server.connect(transport);
+} catch (error) {
+  console.error("Error connecting to transport:", error);
+  process.exit(1);
+}
