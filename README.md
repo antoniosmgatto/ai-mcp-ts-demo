@@ -43,6 +43,16 @@ Run the server in development mode with hot reload:
 npm run dev
 ```
 
+### Inspect Mode
+
+Run the server with the MCP Inspector to debug and analyze protocol messages:
+
+```bash
+npm run inspect
+```
+
+This launches your server through the MCP Inspector tool, which provides a visual interface to monitor and debug the MCP communication between your server and client applications.
+
 ### Build for Production
 
 Compile TypeScript to JavaScript:
@@ -74,6 +84,7 @@ ai-mcp-ts-demo/
 
 - `npm run build` - Compile TypeScript to JavaScript
 - `npm run dev` - Run development server with ts-node
+- `npm run inspect` - Run server with MCP Inspector for debugging
 - `npm start` - Run compiled JavaScript from dist folder
 
 ## License
