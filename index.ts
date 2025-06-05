@@ -1,8 +1,8 @@
 import {
   McpServer,
   ResourceTemplate,
-} from "@modelcontextprotocol/sdk/server/mcp";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio";
+} from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 
 // Create a simple server
@@ -50,7 +50,6 @@ server.resource(
 
 //Start receiving messages on stdin and sending responses on stdout
 const transport = new StdioServerTransport();
+await server.connect(transport);
 
-(async () => {
-  await server.connect(transport);
-})();
+console.log("Server is running and waiting for messages...");

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A MCP server demo using TypeScript",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node index.ts",
+    "dev": "NODE_NO_WARNINGS=1 node --loader ts-node/esm index.ts",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,9 +23,8 @@
     "machine-learning",
     "artificial-intelligence"
   ],
-  "author": "",
+  "author": "Antonio Gatto",
   "license": "MIT",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/antoniosmgatto/ai-mcp-ts-demo/issues"
   },
