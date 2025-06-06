@@ -9,8 +9,30 @@
           "@modelcontextprotocol/server-filesystem",
           "${workspaceFolder}/storage"
         ]
+      },
+      "time": {
+        "command": "python",
+        "args": ["-m", "mcp_server_time", "--local-timezone=America/Sao_Paulo"]
+      },
+      "postgres": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-postgres",
+          "postgresql://postgres:password@localhost:5432/bookstore"
+        ]
       }
     }
   },
-  "chat.mcp.discovery.enabled": true
+  "chat.mcp.discovery.enabled": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "PostgreSQL",
+      "name": "Docker",
+      "group": "Workstation",
+      "connectString": "postgresql://postgres:password@localhost:5432/bookstore"
+    }
+  ]
 }
