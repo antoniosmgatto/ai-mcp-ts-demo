@@ -1,6 +1,6 @@
 # AI MCP TypeScript Demo
 
-A demonstration project showcasing the Model Context Protocol (MCP) server implementation using TypeScript.
+A demonstration project showcasing the Model Context Protocol (MCP) server implementation using TypeScript and set up of MCP custom MCP servers into VSCode.
 
 ## Description
 
